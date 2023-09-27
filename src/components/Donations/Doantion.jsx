@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const Doantion = ({ category }) => {
 
-    const { Picture, Title, Category, Category_bg_Color, Card_bg_Color, Text_and_Button_bg_Color, Price } = category;
+    const { id, Picture, Title, Category, Category_bg_Color, Card_bg_Color, Text_and_Button_bg_Color, Price } = category;
 
     return (
         <div className='rounded-lg' style={{ backgroundColor: Card_bg_Color }}>
@@ -17,7 +18,9 @@ const Doantion = ({ category }) => {
                     <p className='text-2xl font-semibold'>{Title}</p>
                     <p className='text-xs' style={{ color: Text_and_Button_bg_Color }}>{Price}</p>
 
-                    <button className='btn p-2 text-white' style={{ backgroundColor: Text_and_Button_bg_Color }}> View Details</button>
+                    <Link to={`/details/${id}`}>
+                        <button className='btn p-2 text-white' style={{ backgroundColor: Text_and_Button_bg_Color }}> View Details</button>
+                    </Link>
                 </div>
             </div>
         </div>
