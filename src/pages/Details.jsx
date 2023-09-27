@@ -20,7 +20,7 @@ const Details = () => {
                 <div className="relative">
                     <img className="w-full" src={category.Picture} alt="Shoes" />
                     <div className="absolute bottom-0 left-0 w-full bg-gray-800 bg-opacity-70 p-9">
-                        <button onClick={handleClick} className="text-white font-semibold px-6 py-4 btn bg-[#FF444A] border-none">Donate {category.Price}</button>
+                        <button onClick={handleClick} className="text-white font-semibold px-6 py-4 btn border-none" style={{backgroundColor: category.Text_and_Button_bg_Color}}>Donate {category.Price}</button>
                     </div>
                 </div>
                 <div className="mt-14">
