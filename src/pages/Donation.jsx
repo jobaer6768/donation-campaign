@@ -1,9 +1,10 @@
+import Donations from "../components/Donations/Donations";
 
 
 const Donation = () => {
     return (
-        <div>
-            Doantion
+        <div className="my-24">
+            <Donations></Donations>
         </div>
     );
 };
