@@ -1,14 +1,19 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import Swal from 'sweetalert2';
+import { saveCategories } from "../utils/localStorage";
 
 
 const Details = () => {
 
     const categories = useLoaderData();
     const { id } = useParams();
-    const category = categories.find(category => category.id == id);
+    const idInt = parseInt(id);
+    const category = categories.find(category => category.id === idInt);
 
     function handleClick() {
+
+        saveCategories(idInt);
+
         Swal.fire(
             'Donation Successful'
         )
